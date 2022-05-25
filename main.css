@@ -10,22 +10,23 @@
   }
 
   .top {
-    display: grid;
+    display: flex;
     
   }
 
   .clear {
     color: black;
-    background-color: #2bd233;
+    background-color: #8ff708;
     width: 100px;
    
   }
   
   .display {
-    font-size: 50px;
+    font-size: 2rm;
     background-color: #c97c0f;
     text-align: right;
     border: 1px solid;
+    width: 300px;
   }
   
   .calculator-keys {
@@ -42,6 +43,11 @@
     color: white;
   }
 
+  button:hover {
+    background-color: #07bc1c;
+    transition: .2s;
+  }
+
   .divide {
     color: black;
     background-color: #9d9aef;
@@ -56,7 +62,7 @@
   }
   .decimal {
     color: black;
-    background-color: #7dd85a;
+    background-color: #b4bac3;
   }
   .equal {
     color: black;
