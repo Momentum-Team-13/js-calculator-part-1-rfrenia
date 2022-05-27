@@ -55,12 +55,16 @@ function total() {
 }
 equalButton.addEventListener ('click', total)
 
+let clearing ;
 
+function clearingDisplay(){
+    clearing = ''
+    display.textContent = clearing
+}
 
-clearButton.addEventListener('click', function (event) {
-    result += (event.target.textContent);
-    display.textContent= ''
-} )
+clearButton.addEventListener('click', clearingDisplay)
+  
+
 
 
     // number.addEventListener('click', function (event) {
