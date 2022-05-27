@@ -12,7 +12,6 @@ let equalButton = document.querySelector('#equal');
 
 let clearButton = document.querySelector('#clear')
 
-let value = eval(display)
 
 console.log(equalButton);
 console.log(clearButton);
@@ -20,32 +19,42 @@ console.log(keys[2].classList);
 console.log(display)
 
 
-
-
+let displayValue ;
+let operator ;
 
 for (let number of keys) {
     number.addEventListener('click', function (event) {
     console.log(event.target.textContent);
     result += (event.target.textContent);
-    display.textContent=result
+    displayValue = Number (result)
+    display.textContent=displayValue
+        
     })}
+
+    let stored ;
 
 for (let symbol of symbols) {
     symbol.addEventListener('click', function (event) {
     console.log(event.target.textContent);
-    result += (event.target.textContent);
-    display.textContent=result
+    operator = symbol.textContent ;
+    stored = displayValue ;
+    result = ''
     })}
 
 
 function total() {
-    equalButton.addEventListener('click', function (event) {
-     event.target.value; 
-     display.textContent=value ;
-} ) }
-total()
+    if (operator === "+" ) {
+    displayValue = displayValue + stored }
+    else if (operator === "X" ) {
+    displayValue = displayValue * stored }
+    //else if (operator === "-" ) {
+    //displayValue = displayValue - stored }
+    // else if (operator === "/" ) {
+    //     displayValue = displayValue / stored }
+    display.textContent = displayValue 
+}
+equalButton.addEventListener ('click', total)
 
-console.log(value)
 
 
 clearButton.addEventListener('click', function (event) {
