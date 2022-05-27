@@ -1,4 +1,3 @@
-console.log("hi world")
 
 let keys = document.querySelectorAll('.number');
 console.log(keys);
@@ -9,27 +8,19 @@ let display = document.querySelector('.display');
 
 let result = ''
 
-let value = display.textContent=result
+let equalButton = document.querySelector('#equal');
 
-console.log(value)
+let clearButton = document.querySelector('#clear')
 
-let equalButton = document.querySelector('.equal');
+let value = eval(display)
 
 console.log(equalButton);
-
-let clearButton = document.querySelector('button.clear')
 console.log(clearButton);
-
-
 console.log(keys[2].classList);
 console.log(display)
 
 
 
-clearButton.addEventListener('click', function (event) {
-    result += (event.target.textContent);
-    display.textContent= ''
-} )
 
 
 for (let number of keys) {
@@ -46,28 +37,21 @@ for (let symbol of symbols) {
     display.textContent=result
     })}
 
- 
 
-// for (let equal of equalButton) {
-//     equal.addEventListener('click', function (event) {
-//     console.log(event.target.textContent);
-//     outcome += (event.target.textContent);
-//     display.textContent=outcome }
-//     ) }
-
-
-   function equal() {
-        let i = value  ;
-            for (let number of keys) {
-                number.addEventListener('click', function (event) {
-                i
-        })
-    } }
-
+function total() {
     equalButton.addEventListener('click', function (event) {
-        equal() ;
- } )
+     event.target.value; 
+     display.textContent=value ;
+} ) }
+total()
 
+console.log(value)
+
+
+clearButton.addEventListener('click', function (event) {
+    result += (event.target.textContent);
+    display.textContent= ''
+} )
 
 
     // number.addEventListener('click', function (event) {

@@ -14,7 +14,7 @@
     
   }
 
-  .clear {
+  #clear {
     color: black;
     background-color: #8ff708;
     width: 100px;
@@ -57,7 +57,7 @@
   }
 
 
-  .equal {
+  #equal {
     color: black;
     background-color: #ec73b6;
   }
