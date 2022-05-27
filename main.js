@@ -3,41 +3,84 @@ console.log("hi world")
 let keys = document.querySelectorAll('.number');
 console.log(keys);
 
+let symbols = document.querySelectorAll('.symbol');
+
+let display = document.querySelector('.display');
+
+let result = ''
+
+let value = display.textContent=result
+
+console.log(value)
+
+let equalButton = document.querySelector('.equal');
+
+console.log(equalButton);
+
+let clearButton = document.querySelector('button.clear')
+console.log(clearButton);
+
 
 console.log(keys[2].classList);
+console.log(display)
+
+
+
+clearButton.addEventListener('click', function (event) {
+    result += (event.target.textContent);
+    display.textContent= ''
+} )
+
 
 for (let number of keys) {
     number.addEventListener('click', function (event) {
-      console.log(event.target.textContent);
-
+    console.log(event.target.textContent);
+    result += (event.target.textContent);
+    display.textContent=result
     })}
 
-    { const clearButton = document.querySelector('button.clear')
-    function buttonclick (){
-        document.getElementById("a").innerHTML = ''
-    }
-    clearButton.addEventListener('click', buttonclick)
-}
-    for (let number of keys) {
-        number.addEventListener('click', function (event) {
-            document.getElementById("a").innerHTML = event.target.textContent
-    
-        })}
+for (let symbol of symbols) {
+    symbol.addEventListener('click', function (event) {
+    console.log(event.target.textContent);
+    result += (event.target.textContent);
+    display.textContent=result
+    })}
 
-        let equalButton = document.querySelector('.equal');
-        console.log(equalButton);
+ 
 
-       function equal() {
-            let i = 0  ;
-                for (let number of keys) {
-                    number.addEventListener('click', function (event) {
-                    document.getElementById("a").innerHTML = event.target.textContent + i++
-            })
-        } }
+// for (let equal of equalButton) {
+//     equal.addEventListener('click', function (event) {
+//     console.log(event.target.textContent);
+//     outcome += (event.target.textContent);
+//     display.textContent=outcome }
+//     ) }
+
+
+   function equal() {
+        let i = value  ;
+            for (let number of keys) {
+                number.addEventListener('click', function (event) {
+                i
+        })
+    } }
+
+    equalButton.addEventListener('click', function (event) {
+        equal() ;
+ } )
+
+
+
+    // number.addEventListener('click', function (event) {
+    //     function buttonclick (){
+    //         result += (event.target.textContent);
+    //         display.textContent=result
+    // } )
+
+    // for (let number of keys) {
+    //     number.addEventListener('click', function (event) {
+    //         document.getElementById("a").innerHTML = event.target.textContent
     
-        equalButton.addEventListener('click', function (event) {
-            equal() ;
-     } )
+    //     })}
      
 
 //   function print() {

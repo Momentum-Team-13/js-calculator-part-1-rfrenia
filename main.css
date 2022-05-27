@@ -28,6 +28,7 @@
     border: 1px solid;
     width: 300px;
     color: black;
+    overflow-x: scroll;
   }
   
   .calculator-keys {
@@ -50,27 +51,14 @@
     color: black ;
   }
 
-  .divide {
+  .symbol {
     color: black;
     background-color: #9d9aef;
   }
-  .multi {
-    color: black;
-    background-color: #9d9aef;
-  }
-  .minus {
-    color: black;
-    background-color: #9d9aef;
-  }
-  .decimal {
-    color: black;
-    background-color: #b4bac3;
-  }
+
+
   .equal {
     color: black;
     background-color: #ec73b6;
   }
-  .plus{
-    color: black;
-    background-color: #9d9aef;
-  }
+
