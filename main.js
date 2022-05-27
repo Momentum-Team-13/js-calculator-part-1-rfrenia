@@ -4,7 +4,6 @@ let keys = document.querySelectorAll('.number');
 console.log(keys);
 
 
-
 console.log(keys[2].classList);
 
 for (let number of keys) {
@@ -25,17 +24,22 @@ for (let number of keys) {
     
         })}
 
-        let equalbutton = document.querySelector('.equal');
-        console.log(equalbutton);
+        let equalButton = document.querySelector('.equal');
+        console.log(equalButton);
 
        function equal() {
-            let i = 0 ;
+            let i = 0  ;
                 for (let number of keys) {
                     number.addEventListener('click', function (event) {
                     document.getElementById("a").innerHTML = event.target.textContent + i++
             })
         } }
-equal()
+    
+        equalButton.addEventListener('click', function (event) {
+            equal() ;
+     } )
+     
+
 //   function print() {
 //     document.getElementById("a").innerHTML = 
 //          numberButton = document.querySelector('button.number')
@@ -47,60 +51,60 @@ equal()
 //     ;
 
 
-let eight = document.getElementById("8").textContent
-let seven = document.getElementById("7").textContent
+// let eight = document.getElementById("8").textContent
+// let seven = document.getElementById("7").textContent
 
 
 
-{ const clearButton = document.querySelector('button.clear')
-function buttonclick (){
-    document.getElementById("a").innerHTML = ''
-}
-clearButton.addEventListener('click', buttonclick)
-}
-
-//    function print() {
-//      document.getElementById("a").innerHTML = 
-
-{ const numberButton = document.querySelector('button.number7')
-function buttonclick (){
-    document.getElementById("a").innerHTML = seven
-}
-numberButton.addEventListener('click', buttonclick)
-}
-
-{  
-const numberButton = document.querySelector('button.number8')
-function buttonclick (){
-    document.getElementById("a").innerHTML = eight
-    }
-numberButton.addEventListener('click', buttonclick)
-}
-
-// { const numberButton = document.querySelector('button.number9')
-//     numberButton.addEventListener('click', function (event) {
-//    event.target.textContent
-//   })
+// { const clearButton = document.querySelector('button.clear')
+// function buttonclick (){
+//     document.getElementById("a").innerHTML = ''
 // }
-  // }
+// clearButton.addEventListener('click', buttonclick)
+// }
 
+// //    function print() {
+// //      document.getElementById("a").innerHTML = 
 
+// { const numberButton = document.querySelector('button.number7')
+// function buttonclick (){
+//     document.getElementById("a").innerHTML = seven
+// }
+// numberButton.addEventListener('click', buttonclick)
+// }
 
-// // for let button.number of numberButton {
-// //     button.number.addEventListener('click', function (event) {
-// //     console.log(event.target)
-// //     // event.target.classList.remove("unhighlight");
-// //     // event.target.classList.add("highlight");
-// //     }
+// {  
+// const numberButton = document.querySelector('button.number8')
+// function buttonclick (){
+//     document.getElementById("a").innerHTML = eight
+//     }
+// numberButton.addEventListener('click', buttonclick)
+// }
+
+// // { const numberButton = document.querySelector('button.number9')
+// //     numberButton.addEventListener('click', function (event) {
+// //    event.target.textContent
+// //   })
 // // }
+//   // }
 
 
-// //getElementById
 
-// //eventDelegation
+// // // for let button.number of numberButton {
+// // //     button.number.addEventListener('click', function (event) {
+// // //     console.log(event.target)
+// // //     // event.target.classList.remove("unhighlight");
+// // //     // event.target.classList.add("highlight");
+// // //     }
+// // // }
 
-// //(event.target.textContent) ***
 
-//onclick="print()" 
+// // //getElementById
 
-//display.appendChild(nameoftheelement)
+// // //eventDelegation
+
+// // //(event.target.textContent) ***
+
+// //onclick="print()" 
+
+// //display.appendChild(nameoftheelement
