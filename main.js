@@ -47,10 +47,10 @@ function total() {
     displayValue = displayValue + stored }
     else if (operator === "X" ) {
     displayValue = displayValue * stored }
-    //else if (operator === "-" ) {
-    //displayValue = displayValue - stored }
-    // else if (operator === "/" ) {
-    //     displayValue = displayValue / stored }
+    else if (operator === "-" ) {
+    displayValue = stored - displayValue }
+    else if (operator === "/" ) {
+    displayValue = stored / displayValue }
     display.textContent = displayValue 
 }
 equalButton.addEventListener ('click', total)
