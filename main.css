@@ -23,7 +23,7 @@
   
   .display {
     font-size: 2rem;
-    background-color: #c97c0f;
+    background-color: #e0b06d;
     text-align: right;
     border: 1px solid;
     width: 300px;
@@ -60,5 +60,6 @@
   #equal {
     color: black;
     background-color: #ec73b6;
+    
   }
 

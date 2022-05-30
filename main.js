@@ -11,7 +11,6 @@ let stored;
 
 function total() {
   const displayNumber = Number(displayText);
-
   if (operator === "+" ) {
     displayText = displayNumber + stored;
   } else if (operator === "X" ) {
@@ -20,13 +19,15 @@ function total() {
     displayText = stored - displayNumber;
   } else if (operator === "/" ) {
     displayText = stored / displayNumber; 
-  }
+  } 
 
-  display.textContent = displayText
+  operator = '';
+  display.textContent = displayText  
 }
 
 function clearingDisplay(){
   displayText = '';
+  operator = '';
   display.textContent = displayText;
 }
 
@@ -38,9 +39,14 @@ function updateNumberDisplay(event) {
 
 function addOperator(event) {
   console.log('clicked on symbol', event.target.textContent);
-  operator = event.target.textContent;
+
+  if (operator ) {
+    total()
+  } 
+
   stored = Number(displayText);
   displayText = '';
+  operator = event.target.textContent;
 }
 
 // (let number of keys) when numbers and decimal are clicked they
@@ -52,6 +58,7 @@ for (let number of keys) {
 for (let symbol of symbols) {
   symbol.addEventListener('click', addOperator)
 }
+
 
 equalButton.addEventListener ('click', total)
 clearButton.addEventListener('click', clearingDisplay)
