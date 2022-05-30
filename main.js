@@ -5,43 +5,42 @@ const display = document.querySelector('.display');
 const equalButton = document.querySelector('#equal');
 const clearButton = document.querySelector('#clear');
 
-let result = '';
-let displayValue;
+let displayText = '';
 let operator;
 let stored;
 
 function total() {
+  const displayNumber = Number(displayText);
+
   if (operator === "+" ) {
-    displayValue = displayValue + stored
+    displayText = displayNumber + stored;
   } else if (operator === "X" ) {
-    displayValue = displayValue * stored 
+    displayText = displayNumber * stored;
   } else if (operator === "-" ) {
-    displayValue = stored - displayValue 
+    displayText = stored - displayNumber;
   } else if (operator === "/" ) {
-    displayValue = stored / displayValue 
+    displayText = stored / displayNumber; 
   }
 
-  display.textContent = displayValue
+  display.textContent = displayText
 }
 
 function clearingDisplay(){
-  displayValue = ''
-  result = ''
-  display.textContent = displayValue
+  displayText = '';
+  display.textContent = displayText;
 }
 
 function updateNumberDisplay(event) {
   console.log('clicked on number/decimal button', event.target.textContent);
-  result += event.target.textContent;
-  display.textContent=result;
-  displayValue = Number(result);
+  displayText += event.target.textContent;
+  display.textContent=displayText;
 }
 
 function addOperator(event) {
   console.log('clicked on symbol', event.target.textContent);
-  operator = symbol.textContent ;
-  stored = displayValue ;
-  result = '' ;
+  operator = event.target.textContent;
+  stored = Number(displayText);
+  displayText = '';
 }
 
 // (let number of keys) when numbers and decimal are clicked they
