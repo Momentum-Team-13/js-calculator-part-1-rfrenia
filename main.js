@@ -21,7 +21,6 @@ function total() {
     displayText = stored / displayNumber; 
   } 
 
-  operator = '';
   display.textContent = displayText  
 }
 
@@ -43,7 +42,6 @@ function addOperator(event) {
   if (operator ) {
     total()
   } 
-
   stored = Number(displayText);
   displayText = '';
   operator = event.target.textContent;
