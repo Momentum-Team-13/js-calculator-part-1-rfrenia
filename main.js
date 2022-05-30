@@ -26,10 +26,9 @@ for (let number of keys) {
     number.addEventListener('click', function (event) {
     console.log(event.target.textContent);
     result += (event.target.textContent);
-    displayValue = Number (result)
-    display.textContent=displayValue
-        
-    })}
+    display.textContent=result;
+    displayValue = Number (result) ;
+     })}
 
     let stored ;
 
@@ -38,7 +37,7 @@ for (let symbol of symbols) {
     console.log(event.target.textContent);
     operator = symbol.textContent ;
     stored = displayValue ;
-    result = ''
+    result = '' ;
     })}
 
 
@@ -55,11 +54,11 @@ function total() {
 }
 equalButton.addEventListener ('click', total)
 
-let clearing ;
 
 function clearingDisplay(){
-    clearing =
-    display.textContent = clearing
+    displayValue = ''
+    result = ''
+    display.textContent = displayValue
 }
 
 clearButton.addEventListener('click', clearingDisplay)
