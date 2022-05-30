@@ -58,7 +58,7 @@ equalButton.addEventListener ('click', total)
 let clearing ;
 
 function clearingDisplay(){
-    clearing = ''
+    clearing =
     display.textContent = clearing
 }
 
